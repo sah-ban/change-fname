@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fname Manager
+
+This tool allows users to look up Farcaster IDs (FIDs), verify ownership, and seamlessly revoke and claim new handles in a single workflow.
+
+## Features
+
+- **🔍 FID Lookup**: Instantly fetch details for any Farcaster ID and automatically compare the owner address with your connected wallet to verify ownership.
+- **✅ Real-time Validation**: Strict enforcement of Farcaster handle rules (length, characters, and availability) before you commit.
+- **🔄 Atomic Revoke & Claim**: A granular two-step workflow that guides you through revoking your old handle and claiming a new one.
+- **📱 Fully Responsive**: Optimized for both desktop and mobile screens.
+- **🛡️ Security First**: Client-side signing using standard EIP-712 proofs to ensure you maintain full control over your identity.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Node.js](https://nodejs.org/) (v18 or later)
+- An Ethereum wallet (MetaMask, Rainbow, etc.) containing your Farcaster recovery phrase.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  **Clone the repository:**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```bash
+    git clone https://github.com/sah-ban/change-fname.git
+    cd change-fname
+    ```
 
-## Learn More
+2.  **Install dependencies:**
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3.  **Run the development server:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    npm run dev
+    ```
 
-## Deploy on Vercel
+4.  **Open the app:**
+    Navigate to [http://localhost:3000](http://localhost:3000).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1.  **Connect Wallet**: Import your Farcaster recovery phrase into your wallet and connect.
+2.  **Enter FID**: Enter the Farcaster ID you own to unlock management features.
+3.  **Check Availability**: Type your desired new handle and check if it's available.
+4.  **Revoke & Claim**: Follow the on-screen prompts to sign the revoke and claim proofs.
+
+## Developed By
+
+Built with ❤️ by **[@cashlessman.eth](https://farcaster.xyz/cashlessman.eth)**.
+
+If you find this tool useful, consider supporting development:
+`0x21808EE320eDF64c019A6bb0F7E4bFB3d62F06Ec`
+
+## License
+
+MIT
